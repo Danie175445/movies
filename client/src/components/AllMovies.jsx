@@ -76,7 +76,7 @@ const AllMovies = () =>{
                 <h1>Add Movie</h1>
                 <form onSubmit={submitHandler}>
                     <div>
-                    <label htmlFor="name">Name:</label>
+                    <label htmlFor="name">Name</label>
                     {error.name && 
                         <p className={style.error}>{error.name.message}</p>
                     }
@@ -84,7 +84,7 @@ const AllMovies = () =>{
                     </div>
                     <div>
                         <label htmlFor="genre">Genre</label>
-                        {error.name && 
+                        {error.genre && 
                         <p className={style.error}>{error.genre.message}</p>
                         }
                         <input type="text" value={genre} onChange={(e)=>setGenre(e.target.value)}/>

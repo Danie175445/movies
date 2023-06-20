@@ -8,6 +8,7 @@ const EditMovie =(props) =>{
     const {id} = useParams()
     const [name,setName] = useState("")
     const [genre,setgenre] = useState("")
+    const [titleName, setTitleName] = useState("")
     const [errors,setErrors] = useState({})
     useEffect(()=>{
         axios.get(`http://localhost:8000/api/movie/${id}`)
@@ -15,6 +16,7 @@ const EditMovie =(props) =>{
                 console.log(res)
                 setName(res.data.name)
                 setgenre(res.data.genre)
+                setTitleName(res.data.name)
             })
             .catch(err => console.log(err))
     },[])
@@ -37,11 +39,12 @@ const EditMovie =(props) =>{
     }
     return(
         <div>
-            <div>
-                <h1>Edit {name}</h1>
+            <div className={style.nav}>
+                <h1>Edit {titleName}</h1>
                 <Link to={'/'}>Home</Link>
             </div>
-            <div>
+            <div className={style.centerOfPage}>
+                <h1>Edit name and Genre</h1>
                 <form onSubmit={submitHandler}>
                     <div>
                         <label htmlFor="name">Name</label>
