@@ -67,7 +67,7 @@ const AllMovies = () =>{
                                 <td>{movie.name}</td>
                                 <td>{movie.genre}</td>
                                 <td><Link to={`/edit/${movie._id}`}>update</Link>/<button onClick={(e)=>deleteHandler(movie._id)}>Delete</button></td>
-                            </tr>
+                            </tr> 
                         )
                     })}
                 </table>
