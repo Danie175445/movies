@@ -51,7 +51,7 @@ const AllMovies = () =>{
     return(
         <div>
             <div className={style.nav}>
-                <h1>All Movies</h1>
+                <h1>All Movies </h1>
                 <a href="/logout">Logout</a>
             </div>
             <div className={style.centerOfPage}>
